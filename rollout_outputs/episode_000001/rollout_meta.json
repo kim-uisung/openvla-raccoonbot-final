@@ -1,0 +1,59 @@
+{
+  "instruction": "grasp the red cylinder",
+  "target_color": "red",
+  "target_body_name": "target_object",
+  "all_object_init_poses": {
+    "red": {
+      "body_name": "target_object",
+      "xy": [
+        0.029145418678270946,
+        0.20072039708336525
+      ],
+      "yaw": 0.2543610428978853
+    },
+    "blue": {
+      "body_name": "target_object_blue",
+      "xy": [
+        -0.013976375615756417,
+        0.217435690093282
+      ],
+      "yaw": -0.21328209600836578
+    },
+    "green": {
+      "body_name": "target_object_green",
+      "xy": [
+        0.06276864960554274,
+        0.1793906701279094
+      ],
+      "yaw": 0.2848482837126576
+    },
+    "yellow": {
+      "body_name": "target_object_yellow",
+      "xy": [
+        0.09587903958109828,
+        0.2179849028504856
+      ],
+      "yaw": 0.49132810685328754
+    }
+  },
+  "args": {
+    "xml_path": "Raccoon_colored_cylinder.xml",
+    "unnorm_key": "raccoon_pick_place",
+    "camera_name": "front_view",
+    "speed": 70,
+    "settle_seconds_per_action": 0.5,
+    "initial_settle_seconds": 0.3,
+    "delta_scale": 1.0,
+    "max_delta_xyz": 0.005,
+    "seed": null,
+    "object_x_range": [
+      -0.1,
+      0.1
+    ],
+    "object_y_range": [
+      0.16,
+      0.25
+    ],
+    "min_object_distance": 0.035
+  }
+}

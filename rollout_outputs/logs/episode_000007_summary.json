@@ -1,0 +1,8 @@
+{
+  "episode_id": 7,
+  "total_steps": 35,
+  "total_time_sec": 31.93,
+  "avg_inference_time_sec": 0.3484,
+  "min_inference_time_sec": 0.2261,
+  "max_inference_time_sec": 0.9414
+}
