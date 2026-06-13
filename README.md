@@ -6,6 +6,8 @@ RaccoonBot OpenVLA 파이프라인에 **새로운 오브젝트 타입(sphere)**,
 
 Based on [KWU-FAIR-LAB/Raccoonbot_Openvla](https://github.com/KWU-FAIR-LAB/Raccoonbot_Openvla)
 
+**Dataset & Fine-tuned Model (Google Drive)**: https://drive.google.com/drive/folders/15LAftkKejk9S2bXKB9-3WEEe0oduSbSe
+
 ---
 
 ## 📁 Repository 구조
