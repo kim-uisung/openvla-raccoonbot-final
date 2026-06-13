@@ -27,7 +27,7 @@ Based on [KWU-FAIR-LAB/Raccoonbot_Openvla](https://github.com/KWU-FAIR-LAB/Racco
 | `Mujoco/Raccoon_extended_scene.xml` | 서버/로컬 | sphere 4색 추가된 씬 |
 | `Mujoco/visualize_episode_gif.py` | 서버 | 데이터셋 에피소드 → GIF |
 | `episode_animation.gif`, `lift_animation.gif` | — | 데이터셋 에피소드 시각화 |
-| `rollout_outputs/` | — | 추론 결과 (episode_000001~10 프레임 + ep1~10.gif + 로그) |
+| `rollout_outputs/` | — | 추론 결과 (episode_000001-10 프레임 + ep1-10.gif + 로그) |
 | `.gitignore` | — | 로그/시각화/대용량 제외 규칙 (원본에서 수정) |
 
 > 원본 그대로(미수정): `openvla/`, `dlimp_openvla/`, `Mujoco/raccoon_env.py`,
@@ -142,8 +142,8 @@ pip install -r requirements.txt
 ```bash
 cd Mujoco
 python raccoon_grasp_multicolor_scene_dataset.py   # 원본 grasp
-python raccoon_grasp_extended_dataset.py           # 🆕 확장 grasp (cylinder+sphere, 5종)
-python raccoon_lift_dataset.py                     # 🆕 lift
+python raccoon_grasp_extended_dataset.py           # 확장 grasp (cylinder+sphere, 5종)
+python raccoon_lift_dataset.py                     # lift
 ```
 
 ## 2. RLDS 변환 (server)
