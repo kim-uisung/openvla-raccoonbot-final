@@ -19,7 +19,6 @@ Based on [KWU-FAIR-LAB/Raccoonbot_Openvla](https://github.com/KWU-FAIR-LAB/Racco
 | 파일 | 실행 위치 | 설명 |
 |---|---|---|
 | `openvla_extended_client.py` | 로컬 | **최종 클라이언트** — cylinder+sphere, grasp+lift, JPEG 압축, 타이밍 로그, 언어 지시 5종 |
-| `openvla_multicolor_client_improved.py` | 로컬 | 중간 버전 (JPEG + 타이밍, cylinder grasp) |
 | `openvla_multicolor_client.py` | 로컬 | 원본 baseline (before 비교용) |
 | `openvla_multicolor_client_real_robot.py` | 로컬 | 실물 RaccoonBot 제어 클라이언트 |
 | `rollout_visualize.py` | 로컬 | 추론 결과(프레임) → GIF 변환 |
@@ -36,7 +35,7 @@ Based on [KWU-FAIR-LAB/Raccoonbot_Openvla](https://github.com/KWU-FAIR-LAB/Racco
 
 ---
 
-## 🆕 Assignment 1: Dataset Extension
+## Assignment 1: Dataset Extension
 
 ### 1. New Object Type — Sphere
 - MuJoCo 씬에 4색 sphere(red, blue, green, yellow) 추가
@@ -60,7 +59,7 @@ Based on [KWU-FAIR-LAB/Raccoonbot_Openvla](https://github.com/KWU-FAIR-LAB/Racco
 
 ---
 
-## 🆕 Assignment 2: Code Improvement
+## Assignment 2: Code Improvement
 
 ### Extended Client — `openvla_extended_client.py`
 
@@ -118,8 +117,8 @@ Based on [KWU-FAIR-LAB/Raccoonbot_Openvla](https://github.com/KWU-FAIR-LAB/Racco
 
 # 실행 가이드 (Setup & Run)
 
-> ⭐ 1~3번은 직접 fine-tuning하는 과정입니다. 체크포인트를 불러와 추론만 하는 경우 **0번과 4번**만 진행하세요.
-> 0~3번은 **server(Ubuntu GPU)**, 4번은 **local(클라이언트) + server(추론 서버)**에서 실행합니다.
+> ⭐ 1-3번은 직접 fine-tuning하는 과정입니다. 체크포인트를 불러와 추론만 하는 경우 **0번과 4번**만 진행하세요.
+> 0-3번은 **server(Ubuntu GPU)**, 4번은 **local(클라이언트) + server(추론 서버)**에서 실행합니다.
 
 ## 0. Dependencies (server)
 ```bash
@@ -253,15 +252,8 @@ python openvla_extended_client.py \
 
 ### 4-5. (참고) 실물 RaccoonBot 연결 (local)
 실물 RaccoonBot을 COM 포트로 연결한 뒤, `--use_real_robot`로 실제 동작을 수행합니다.
-**안전을 위해 작은 이동폭·낮은 속도부터 시작하고, 비상정지 가능한 상태에서 실행하세요.**
 ```bash
-# 1) 소폭 테스트 (5스텝, 느린 속도)
-python openvla_multicolor_client_real_robot.py \
-  --server_url http://127.0.0.1:8000 \
-  --xml_path Raccoon_colored_cylinder.xml --target_color red \
-  --use_real_robot --max_delta_xyz 0.002 --speed 30 --max_steps 5
-
-# 2) 정상 확인 후 전체 실행 (이동폭은 실물 기준 0.005~0.01 권장)
+# 2) 정상 확인 후 전체 실행
 python openvla_multicolor_client_real_robot.py \
   --server_url http://127.0.0.1:8000 \
   --xml_path Raccoon_colored_cylinder.xml --target_color red \
