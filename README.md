@@ -287,3 +287,8 @@ python rollout_visualize.py \
 
 ### Inference Rollouts
 <img src="rollout_outputs/ep9.gif" width="250"> <img src="rollout_outputs/ep10.gif" width="250">
+
+### Real Robot
+시뮬레이션에서 학습된 정책을 실물 RaccoonBot(COM 포트 연결)에 전달해 동작을 확인했습니다.
+
+<img src="real_robot_demo.gif" width="320">
